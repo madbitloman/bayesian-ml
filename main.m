@@ -11,10 +11,10 @@ b=(c1/c2-1)*c2/(c1*h); % Normalization constants for Interdiffusion
 g=2*(1/(1-c11)+1/c22)*(c22-c11); %Normalization constants for Volume Diffusion
 
 
-[ Dopt ] = DopT( xi,ti,c1,c2,h); % optimal value of Diffusion Coefficient
-[ pogr] = pogR( xi,ti,Dopt,b,s);
-[ Dvol] = DvoL( x1i,t1i,c11,c22,h);
-[ pogrv] = pogrV( x1i,t1i,Dvol,g,s);
+[Dopt] = DopT( xi,ti,c1,c2,h); % optimal value of Diffusion Coefficient
+[pogr] = pogR( xi,ti,Dopt,b,s);
+[Dvol] = DvoL( x1i,t1i,c11,c22,h);
+[pogrv] = pogrV( x1i,t1i,Dvol,g,s);
 
 display(['Probable value of interdiffusion D = ' num2str(Dopt) ' +- ' num2str(pogr)]);
 display(['Probable value of volume D = ' num2str(Dvol) ' +- ' num2str(pogrv)]);

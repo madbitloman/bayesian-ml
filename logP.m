@@ -4,14 +4,12 @@ function [ Logp ] = logP(xi,ti,M,s)
 w=0;
 p=length(ti);
 
-    for i=1:p;
-    
-        w = w+(xi(i)-sqrt(ti(i)*M)).^2;
+for i=1:p;
+   w = w+(xi(i)-sqrt(ti(i)*M)).^2;
 
-    end
+end
     
-        Logp=-((log((1/(2*pi*s^2))^(-p/2))-(1/(2*s^2))*w));
-    
-        
+Logp=-((log((1/(2*pi*s^2))^(-p/2))-(1/(2*s^2))*w));
+            
 end
 
