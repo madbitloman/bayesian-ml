@@ -1,10 +1,9 @@
-function [ Logp ] = logP(xi,ti,M,s)
-%Calc of logP
+function [Logp] = logP(xi,ti,M,s)
+%THis function calculates log posterior
 %   '-' before logP to find the minimum
 w=0;
-p=length(ti);
 
-for i=1:p;
+for i=1:length(ti);
    w = w+(xi(i)-sqrt(ti(i)*M)).^2;
 end
     
