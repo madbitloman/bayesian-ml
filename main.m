@@ -34,7 +34,7 @@ Dprob=(c/b)*1e-6; % correction 1e-6sm is due to the micron scale
 
 display(Dprob);
 
-% Volume Diffusion 
+% Volume Diffusion Coefficient
 K=0:1:100;loggg=zeros(1,length(K));
 for u=1:length(K) 
     loggg(u)=logP(x1i,t1i,K(u),s); 
